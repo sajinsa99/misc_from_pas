@@ -1,0 +1,26 @@
+use warnings;
+use diagnostics;
+
+use JIRA::REST;
+use JIRA::Client::Automated;
+
+local $ENV{PERL_LWP_SSL_VERIFY_HOSTNAME} = 0 ;
+
+$jira_Url       = "https://sapjira.wdf.sap.corp";
+$jira_User      = `prodpassaccess get jira user`;
+chomp $jira_User;
+$jira_Password  = `prodpassaccess get jira password`;
+chomp $jira_Password;
+$jira_Connexion = JIRA::Client::Automated->new($jira_Url, $jira_User, $jira_Password);
+if($jira_Connexion) {
+        print "\n\nConnexion successfully\n";
+        my $jira_key = $ARGV[0] || "DTXMAKE-2046";
+        my $issue = $jira_Connexion->get_issue($jira_key);
+        my $title = $issue->{'fields'}->{'summary'};
+        print "$jira_key : $title>\n\n";
+        exit 0;
+}
+else {
+        print "ERROR : cannot to Jira server $jira_Url, with user $jira_User\n";
+        exit 1;
+}
