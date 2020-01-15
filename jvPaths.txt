@@ -1,0 +1,29 @@
+################################################################
+################################ Walldorf
+[Walldorf]
+PREFIXSITE     = wdf
+CIS_HTTP_DIR   = http://mo-60192cfe2.mo.sap.corp:8890/cgi-bin/CIS.pl
+TORCH_HTTP_DIR = https://vanpgbi002.pgdev.sap.corp/Torch
+### network accesses
+CIS_DIR        = /net/build-drops-wdf/preintegration/CIS/
+JOBS_DIR       = /build/pblack/Build/shared/jobs
+EVENTS_DIR     = /net/build-drops-wdf/buildevents
+IMG_SRC        = http://mo-60192cfe2.mo.sap.corp:8890/cgi-bin/images
+P4CLIENT       = pblack_mo-60192cfe2
+CBTPATH        = /build/pblack/core.build.tools/export/shared
+JV_DIR         = /build/pblack/depot/internal/cis/cgi-bin
+JOBDB_DIR      = /build/pblack/perforce/perforceBO/internal/jobdb
+
+
+
+################################################################
+################################ Vancouver
+[Vancouver]
+PREFIXSITE     = VAN
+CIS_HTTP_DIR   = http://cis-van.pgdev.sap.corp:1080/cis/cgi-bin/CIS.pl
+TORCH_HTTP_DIR = https://vanpgbi002.pgdev.sap.corp/Torch
+### network accesses
+CIS_DIR        = //build-drops-wdf/preintegration/CIS
+JOBS_DIR       = C:/Build/shared/jobs
+EVENTS_DIR     = //build-drops-wdf/buildevents
+IMG_SRC        = http://cis-van.pgdev.sap.corp:1080/cis/images/
