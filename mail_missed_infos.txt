@@ -1,0 +1,11 @@
+#
+# $RELEASED_VERSION will be replaced by the released version coming from mail_missed.pl
+# so nothing else after 'Subject'
+
+SMTP_SERVER: mail.sap.corp
+From: DL_54C0D920DF15DB6182000007@exchange.sap.corp
+# To: DL_54C0D920DF15DB6182000007@exchange.sap.corp
+To : bruno.fablet@sap.com
+# Cc: xmake-support@exchange.sap.corp
+# Bcc: DL_54C0D920DF15DB6182000007@exchange.sap.corp
+Subject: [ACTION REQUIRED] - Release Notes - $RELEASED_VERSION MISSED

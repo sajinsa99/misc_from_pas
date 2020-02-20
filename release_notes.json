@@ -1,0 +1,21 @@
+{
+    "artifacts_input":[
+        {
+            "nexus":"http://nexus.wdf.sap.corp:8081/nexus/content/repositories",
+            "repository":"deploy.milestones.xmake",
+            "groupID": "com.sap.prd.xmake.release_vector",
+            "artifactID": "ci_workflows_release_vector",
+            "oldest_version_supported" : "1.7.93",
+            "jira": "DTXMAKE",
+            "title" : "xMake"
+        }
+    ],
+    "artifacts_output":[
+        {
+            "nexus":"http://nexus.wdf.sap.corp:8081/nexus/content/repositories",
+            "repository":"deploy.milestones",
+            "groupID": "com.sap.prd.xmake",
+            "artifactID": "release_notes"
+        }
+    ]
+}
